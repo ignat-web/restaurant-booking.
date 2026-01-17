@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPB.Rest — Бронирование столов</title>
+    <link rel="icon" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/80/80933.png" class="header__logo_img"
+                    style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                <a href="#" class="header__logo">SPB.Rest</a>
+            </div>
+            <nav class="header__nav">
+                <a href="about.html" class="nav__link">о нас</a>
+                <a href="contacts.html" class="nav__link">Контакты</a>
+            </nav>
+            <button id="openLogin" class="header__button">Войти</button>
+
+        </div>
+    </header>
+    <div class="hero-block">
+        <h1>SPB.Rest</h1>
+        <p>Бронируй столик в Санкт-Петербурге</p>
+        <a href="#catalog" class="cta-button">Забронировать столик</a>
+    </div>
+
+    <section class="restaurants" id="catalog">
+        <h3 class="section-title" id="popular">Популярные рестораны</h3>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" id="prevBtn">❮</button>
+            <div class="carousel-window">
+                <div class="restaurants__grid" id="track">
+                    <article class="restaurant-card">
+                        <img src="https://scdn.tomesto.ru/img/place/000/003/946/restoran-ferma-ferma-na-finlyandskom-prospekte_92c16_full-51375.jpg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>fermA</h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Финляндский пр., 1
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.8 / Более 8 500 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Авторская, европейская,
+                                русская, кондитерская.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://avatars.mds.yandex.net/get-altay/176734/2a000001631629f13f06f96b1921458c72d7/L_height"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Birch</h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                ул. Кирочная, 3
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.9 / Более 12 000 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Авторская кухня.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://static.sobaka.ru/images/post/00/08/30/29/_huge.jpg?v=1544382064"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Harvest </h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                ул. Добролюбова пр., 11
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.7 / 5 более 6000 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Современная европейская, с акцентом на овощи и сезонные продукты.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://s.restorating.ru/places/1920x1080/places/33765/65547aece38d4.jpg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>BoBo </h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                ул. Виленский пер., 15
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.7/5 / более 690 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Изысканная авторская, эногастрономия.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://assets.allcafe.ru/k/places/1920x1080/pic/places/33502/c11273d9fef4e8bb2e847838129ce80e.jpeg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Meat Coin</h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                ул. Рубинштейна, 4
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.8 / Более 2 800 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Стейк-хаус, турецкая, мясная.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://assets.allcafe.ru/k/places/canvas/1920x1080/pic/places/4845/d5169a0bd7e1429a6cbe4b4f5e4254b2.jpeg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Рыба</h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                ул. Академика Павлова, 5В
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.7 / Более 7 000 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Итальянская, европейская.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <button class="carousel-btn next" id="nextBtn">❯</button>
+        </div>
+    </section>
+
+
+
+    <section class="restaurants" id="catalog">
+        <h3 class="section-title" id="family">семейный ужин</h3>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" id="prevBtn">❮</button>
+            <div class="carousel-window">
+                <div class="restaurants__grid" id="track">
+                    <article class="restaurant-card">
+                        <img src="https://spb.restoran.ru/upload/iblock/06c/little_italy_interior_2552.jpg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Little Italy</h4>
+                                <span>₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Итальянская ул., 33
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.7 / Более 2 500 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Итальянская кухня.
+
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://scdn.tomesto.ru/img/place/000/002/087/restoran-kapuletti-capuletti-na-bolshom-prospekte-p-s_80795_full-49377.jpg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Capuletti</h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Большой пр. П.С., 74
+
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.6 / Более 3 000 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Итальянская кухня.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://assets.allcafe.ru/k/places/1920x1080/pic/places/10729/49e1a6b4c5bd154616d8bd33fbb44b9c.jpeg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Большая Кухня </h4>
+                                <span>₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Лиговский пр., 30А (ТЦ «Галерея», 5 этаж)
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.5 / Более 5 000 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Огромный семейный ресторан с террасой на крыше и полноценной сценой.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://scdn.tomesto.ru/img/place/000/019/299/restoran-pryanosti-radosti-na-6-oy-linii-v-o_00108_full-437366.jpg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Пряности и Радости </h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                6-я линия В.О., 13
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.6 / Более 2 100 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Грузинская, европейская.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/05/49/88/caption.jpg?w=900&h=500&s=1"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Марчеллис</h4>
+                                <span>₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Невский пр., 21
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.8 / Более 2 800 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Итальянская кухня.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://avatars.mds.yandex.net/get-altay/965007/2a00000162882c3800a6ab1a520ceb66388d/L_height"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Юность</h4>
+                                <span>₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                ул. Савушкина, 21
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.7 / Более 4 500 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                кавказская, европейская кухня.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <button class="carousel-btn next" id="nextBtn">❯</button>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="restaurants" id="catalog">
+        <h3 class="section-title" id="friend">ужин с друзьями</h3>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" id="prevBtn">❮</button>
+            <div class="carousel-window">
+                <div class="restaurants__grid" id="track">
+                    <article class="restaurant-card">
+                        <img src="https://avatars.mds.yandex.net/get-altay/1880524/2a0000016f55fb5140ba0a1582d62ceab42e/L_height"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Frank</h4>
+                                <span>₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                ул. Рубинштейна, 23
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.7 / Более 4 900 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Гриль, ребра.
+
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://img.restoclub.ru/uploads/place/7/3/9/f/739f0111d45c1ddf247205c112d2004f_w1230_h820--no-cut.webp?v=3"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Meat_Coin</h4>
+                                <span>₽₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                ул. Кораблестроителей, 14
+
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.6 / Более 1 600 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Премиальный стейк-хаус.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://img.restoclub.ru/uploads/place/7/7/7/0/7770b58df39f2572306e714a4f86f005_w1230_h820--no-cut.webp?v=3"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Smoke BBQ </h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                ул. Рубинштейна, 11
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.8 / Более 3 100 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Мясная, техасский брискет.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://petersburg24.ru/files/articles/3478_image.jpg?1553077135"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Kriek </h4>
+                                <span>₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Невский пр., 47
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.7 / Более 3 400 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Бельгийская, пивной ресторан.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://avatars.mds.yandex.net/get-altay/1554359/2a0000016ded95c56ee3010dc17c8c523a28/L_height"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Tiger Lily</h4>
+                                <span>₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Итальянская ул., 19
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.6 / Более 2 500 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Китайская кухня.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://scdn.tomesto.ru/img/place/000/019/839/restoran-duo-gastrobar-na-kirochnoy-ulitse_27c97_full-270291.jpg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Duo Gastrobar</h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Кирочная ул., 8
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.8 / Более 3 300 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Авторская, европейская кухня.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <button class="carousel-btn next" id="nextBtn">❯</button>
+        </div>
+    </section>
+
+
+
+
+    <section class="restaurants" id="catalog">
+        <h3 class="section-title" id="romantic">романтический ужин </h3>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" id="prevBtn">❮</button>
+            <div class="carousel-window">
+                <div class="restaurants__grid" id="track">
+                    <article class="restaurant-card">
+                        <img src="https://avatars.mds.yandex.net/get-altay/1545421/2a00000188f4810bde08784dab9d059d81f2/L_height"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4> La Vue</h4>
+                                <span>₽₽₽₽ </span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                ул. Пироговская наб., 5/2
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.5 / 5 более 1000 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Авторская, Европейская.
+
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://avatars.mds.yandex.net/get-discovery-int/1532686/2a000001863b1557ea43af6c7433316d0b6b/L"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4> Sky & Garden</h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Инженерная ул., 9А, 7 этаж
+
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.8 / 5 более 90 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Авторская, Европейская.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://scdn.tomesto.ru/img/place/000/032/671/restoran-zabyli-sahar-one-trinity-place-na-naberezhnoy-admirala-lazareva_2ae58_full-434901.jpg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>One Trinity Place </h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                ул. наб. Адмирала Лазарева, 22
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                5 / 5 более 400 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Современная, Здоровая кухня, Десерты.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://scdn.tomesto.ru/img/place/000/029/718/restoran-noisy-river-noyzi-river-na-naberezhnoy-reki-fontanki_d8be0_full-434407.jpg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Noisy River </h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                набережная реки Фонтанки, 59
+
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.5 / 5 более 1100 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Европейская с азиатскими акцентами.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://scdn.tomesto.ru/img/place/000/004/010/restoran-cherdak-hudozhnika-na-ulitse-lomonosova_6a045_logo-28499.jpg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Чердак Художника</h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                ул. Ломоносова, 1/28
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.6 / 5 более 680 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Европейская, Фондю.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://avatars.mds.yandex.net/get-altay/1924793/2a0000016ea0ca9538ad4e3a979476df9a40/L_height"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Chekhov </h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Петропавловская ул., 4
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.6 / 5 более 460 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Русская кухня.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <button class="carousel-btn next" id="nextBtn">❯</button>
+        </div>
+    </section>
+
+
+
+    <section class="restaurants" id="catalog">
+        <h3 class="section-title" id="Italya"> итальянская кухня </h3>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" id="prevBtn">❮</button>
+            <div class="carousel-window">
+                <div class="restaurants__grid" id="track">
+                    <article class="restaurant-card">
+                        <img src="https://avatars.mds.yandex.net/get-altay/9954022/2a00000188f47aae3a6b4abc0ad03fdd9f94/orig"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4> Il Milanese</h4>
+                                <span>₽₽₽ </span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Литейный пр-т, 7
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.8 / Более 600 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Итальянская.
+
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://avatars.mds.yandex.net/get-altay/13212679/2a00000193c7734f5f94b0c2f7992bf74c35/L_height"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4> LaCelletta Caffe</h4>
+                                <span>₽₽₽ </span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Набережная реки Фонтанки, 30
+
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.7 / Более 1 700 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Итальянская.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://static.tildacdn.com/tild3363-3336-4839-a265-303039363532/2.jpg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Tetto Italian bistro </h4>
+                                <span>₽₽₽ </span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Большой П.С. пр-т, 84
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.8 / Более 800 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Итальянская.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://s.restorating.ru/places/1920x1080/places/48477/63d3ca6a78350.jpg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>La Biga Italian bistro </h4>
+                                <span>₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Гороховая ул., 16/71
+
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.7 / Более 90 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Итальянская.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://images.a-a-ah.ru/uploads/items/7482/274950/medium_%D0%B9.jpg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Mama Roma</h4>
+                                <span>₽₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Караванная ул., 3/35
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.3 / Более 2 400 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Итальянская.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="restaurant-card">
+                        <img src="https://scdn.tomesto.ru/img/place/000/019/835/restoran-paninaro-paninaro-na-bolshoy-zelenina_f8ec5_full-361650.jpeg"
+                            class="restaurant-card__img">
+                        <div class="linear"></div>
+                        <div class="restaurant-card__content">
+                            <div class="price-container">
+                                <h4>Paninaro </h4>
+                                <span>₽₽</span>
+                            </div>
+                            <div class="address">
+                                <img src="https://velnovg.leclick.ru/img/icons/loc.svg" style="width: 14px;">
+                                Большая Зеленина ул., 28
+                            </div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="star">
+                                4.5 / Более 600 оценок
+                            </div>
+                            <div class="kitchen">
+                                <img src="https://velnovg.leclick.ru/img/icons/kitchen.svg" style="width: 14px;">
+                                Итальянская.
+                            </div>
+                            <button class="btn-open-booking">Забронировать</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <button class="carousel-btn next" id="nextBtn">❯</button>
+        </div>
+    </section>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content auth-content">
+            <span class="close-login">&times;</span>
+            <div class="modal-header">
+                <h2>Вход</h2>
+                <p>Войдите, чтобы копить бонусы</p>
+            </div>
+            <form id="loginForm" class="modal-form">
+                <input type="tel" id="userPhone" placeholder="+7 (___) ___-__-__" required>
+                <div id="smsCodeField" style="display: none;">
+                    <input type="text" placeholder="Код из SMS" maxlength="4">
+                </div>
+                <button type="submit" id="loginBtn" class="submit-btn">Получить код</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-header">
+                <h2>SPB.Rest</h2>
+                <p class="bron">Забронировать столик</p>
+            </div>
+            <form id="bookingForm" class="modal-form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+                <div class="form-row">
+                    <input type="date" name="date" required>
+                    <input type="time" name="time" required>
+                </div>
+                <select name="guests">
+                    <option value="1">1 человек</option>
+                    <option value="2">2 человека</option>
+                    <option value="3">3 человека</option>
+                    <option value="4">4 человека</option>
+                    <option value="5+">5+ человек</option>
+                </select>
+                <button type="submit" class="submit-btn">Забронировать</button>
+            </form>
+        </div>
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-logo">SPB.rest</h3>
+                <p>Ваш гид по лучшим заведениям Петербурга. Бронируйте столы для любого повода: от романтических встреч
+                    до веселых ужинов с друзьями.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Категории</h4>
+                <ul>
+                    <li><a href="#romantic">Романтическая встреча</a></li>
+                    <li><a href="#friend">Ужин с друзьями</a></li>
+                    <li><a href="#family">Семейный ужин</a></li>
+                    <li><a href="#popular">Популярные рестораны</a></li>
+                    <li><a href="#Italya">Итальянская кухня</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Поддержка</h4>
+                <p>По вопросам бронирования:</p>
+                <p>Email: i18224069@gmail.com</p>
+                <p>Тел: +7 (996) 245-97-48</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 RestoBooking SPB. Сервис бронирования столиков в Санкт-Петербурге.</p>
+        </div>
+    </footer>
+
+</body>
+
+<style>
+
+</style>
+
+<script src="script.js"></script>
+<script src="login.js"></script>
+
+</html>
